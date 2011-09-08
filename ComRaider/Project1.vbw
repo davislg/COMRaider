@@ -1,0 +1,15 @@
+frmMain = 10, 10, 631, 634, , 7, 19, 644, 582, C
+CInterface = 66, 66, 688, 424, C
+CMember = 24, 26, 710, 520, 
+CTlbParse = 0, 0, 575, 369, C
+CClass = 66, 66, 641, 435, 
+modMain = 88, 88, 577, 457, 
+CArgument = 33, 50, 533, 498, C
+frmLoadFile = 110, 110, 560, 554, , 88, 88, 640, 532, C
+frmSafeForScripting = 154, 154, 604, 598, C, 132, 132, 582, 576, C
+frmCrashMon = 176, 176, 657, 620, , 154, 154, 635, 598, C
+CCrashMon = 132, 132, 532, 576, Z
+modWinMonitor = 176, 176, 668, 620, C
+CWindow = 0, 0, 0, 0, C
+CLogger = 0, 0, 0, 0, C
+CException = 132, 132, 633, 576, C

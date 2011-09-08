@@ -1,0 +1,22 @@
+LIBRARY crashmon
+      DESCRIPTION 'COMRaider Crash Monitor Library'
+      EXPORTS
+		SetTargetHwnd
+		LaunchDebugedProcess
+		GetErrorMessage
+		Continue
+		StopDebugger
+		ActivePID
+		GetModuleList
+		GetModuleListErrorMsg
+		GetStackWalkErrMsg
+		InitStackWalk
+		GetCallStack
+		GetTibForThread
+		TestClsID
+		CreateIDispObj
+		GetInterfaceInfoForClsid
+		InitSearchPath
+		Cleanup
+		LoadModuleSymbols
+		GetSymbol

@@ -1,0 +1,26 @@
+HKCR
+{
+	Vuln.server.1 = s 'server Class'
+	{
+		CLSID = s '{8EF2A07C-6E69-4144-96AA-2247D892A73D}'
+	}
+	Vuln.server = s 'server Class'
+	{
+		CLSID = s '{8EF2A07C-6E69-4144-96AA-2247D892A73D}'
+		CurVer = s 'Vuln.server.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8EF2A07C-6E69-4144-96AA-2247D892A73D} = s 'server Class'
+		{
+			ProgID = s 'Vuln.server.1'
+			VersionIndependentProgID = s 'Vuln.server'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{CB85160D-AC62-4288-AFEE-E39B35F436B7}'
+		}
+	}
+}

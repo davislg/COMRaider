@@ -1,0 +1,8 @@
+LIBRARY olly
+      DESCRIPTION 'Olly Asm/Disasm Dll Library'
+      EXPORTS
+         Assemble
+		 Disasm
+		 Disassembleback
+		 Disassembleforward
+		 VB_SetOptions

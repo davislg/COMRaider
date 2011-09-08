@@ -1,0 +1,54 @@
+// vuln.idl : IDL source for vuln.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (vuln.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(426D34DC-2298-417E-A840-6CBDB5AE93E0),
+		dual,
+		helpstring("Iserver Interface"),
+		pointer_default(unique)
+	]
+	interface Iserver : IDispatch
+	{
+		[id(1), helpstring("method Method1")] HRESULT Method1([in] BSTR sPath, [out,retval] long *retVal);
+		[id(2), helpstring("method Method2")] HRESULT Method2([in] long lin, [out,retval] long *retVal);
+		[id(3), helpstring("method Method3")] HRESULT Method3([in] VARIANT vin, [out,retval] long *retVal);
+		[id(4), helpstring("method Method4")] HRESULT Method4([in] BSTR sPath, [in] BSTR msg , [out,retval] long *retVal);
+		[id(5), helpstring("method HeapCorruption")] HRESULT HeapCorruption([in] BSTR strIn, [in] long bufSize, [out,retval] long *retVal);
+	};
+
+[
+	uuid(CB85160D-AC62-4288-AFEE-E39B35F436B7),
+	version(1.0),
+	helpstring("vuln 1.0 Type Library")
+]
+library VULNLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(8712742F-B31D-4241-82D8-0B1C93D6F8A7),
+		helpstring("_IserverEvents Interface")
+	]
+	dispinterface _IserverEvents
+	{
+		properties:
+		methods:
+	};
+
+	[
+		uuid(8EF2A07C-6E69-4144-96AA-2247D892A73D),
+		helpstring("server Class")
+	]
+	coclass server
+	{
+		[default] interface Iserver;
+		[default, source] dispinterface _IserverEvents;
+	};
+};
